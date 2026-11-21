@@ -6,8 +6,8 @@ const PORT = Number(process.env.PORT) || 3000;
 const server = http.createServer((req,res)=>{
     console.log("요청 발생");
     console.log(req.method);
-    res.setHeader("Contetn-type","text/plain")
-const readstream = fs.createReadStream(_dirname=-+"/indec.html", "utf8");
+    res.setHeader("Content-Type","text/plain")
+const readStream = fs.createReadStream(__dirname+"/index.html", "utf8");
 readstream.pipe(res);
 });
 
