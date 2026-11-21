@@ -2,7 +2,7 @@
 const http = require("http");
 const fs = require("fs")
 
-const port = number(processenv.port) || 3000;
+const PORT = number(processenv.PORT) || 3000;
 const server = http.createServer((req,res)=>{
     console.log("요청 발생");
     console.log(req.method);
@@ -11,6 +11,6 @@ const readstream = fs.createReadStream(_dirname=-+"/indec.html", "utf8");
 readstream.pipe(res);
 });
 
-server.listen(port, ()=>{
-    console.log(`${port}번 포트로 서버 실행`);
+server.listen(PORT, ()=>{
+    console.log(`${PORT}번 포트로 서버 실행`);
 });
