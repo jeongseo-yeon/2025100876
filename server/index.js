@@ -2,7 +2,7 @@
 const http = require("http");
 const fs = require("fs")
 
-const PORT = number(processenv.PORT) || 3000;
+const PORT = Number(process.env.PORT) || 3000;
 const server = http.createServer((req,res)=>{
     console.log("요청 발생");
     console.log(req.method);
